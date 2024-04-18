@@ -62,11 +62,11 @@ export default {
       // type: Object,
       // default: () => {
       //   return {
-          name: '你好',
-          email: '',
-          avatar: '',
-          role: '你好'
-        }
+      name: '你好',
+      email: '',
+      avatar: '',
+      role: '你好'
+    }
     //   }
     // }
   }
