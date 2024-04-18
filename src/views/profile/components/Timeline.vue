@@ -17,24 +17,24 @@ export default {
     return {
       timeline: [
         {
-          timestamp: '2019/4/20',
-          title: 'Update Github template',
-          content: 'PanJiaChen committed 2019/4/20 20:46'
+          timestamp: '2024/4/10',
+          title: 'SpotClean',
+          content: 'LiYunbing committed 2024/4/10 13:46'
         },
         {
-          timestamp: '2019/4/21',
-          title: 'Update Github template',
-          content: 'PanJiaChen committed 2019/4/21 20:46'
+          timestamp: '2024/3/20',
+          title: 'Controller',
+          content: 'LiYunbing committed 2024/3/20 08:21'
         },
         {
-          timestamp: '2019/4/22',
+          timestamp: '2024/1/15',
           title: 'Build Template',
-          content: 'PanJiaChen committed 2019/4/22 20:46'
+          content: 'LiYunbing committed 2024/1/15 14:05'
         },
         {
-          timestamp: '2019/4/23',
-          title: 'Release New Version',
-          content: 'PanJiaChen committed 2019/4/23 20:46'
+          timestamp: '2023/11/19',
+          title: 'Test Data',
+          content: 'LiYunbing committed 2023/11/19 09:34'
         }
       ]
     }
