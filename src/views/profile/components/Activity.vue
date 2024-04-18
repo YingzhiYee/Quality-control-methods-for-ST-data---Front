@@ -3,8 +3,8 @@
     <div class="post">
       <div class="user-block">
         <img class="img-circle" :src="'s1.png'">
-        <span class="username text-muted">LiYunbing</span>
-        <span class="description"> 13:46 PM 2024/4/10</span>
+        <span class="username text-muted">{{ user.name }}</span>
+        <span class="description"> {{ user.description.time }}</span>
       </div>
       <p>
         New SpotClean algorithm, update completed.
@@ -27,8 +27,8 @@
     <div class="post">
       <div class="user-block">
         <img class="img-circle" :src="'s1.png'">
-        <span class="username text-muted">LiYunbing</span>
-        <span class="description">08:21 PM 2024/3/20</span>
+        <span class="username text-muted">{{ user.name }}</span>
+        <span class="description">{{ user.description }}</span>
       </div>
       <p>
         test the project
@@ -77,8 +77,16 @@ const avatarPrefix = '?imageView2/1/w/80/h/80'
 const carouselPrefix = '?imageView2/2/h/440'
 
 export default {
+  
+  
   data() {
     return {
+    user: {
+      name: '你好',
+      email: '',
+      avatar: '',
+      role: '你好'
+    },
       carouselImages: [
         '基因.jpg',
         's11.jpg',
@@ -87,7 +95,22 @@ export default {
       avatarPrefix,
       carouselPrefix
     }
+  },
+  methods:{
+    setup() {
+    const posts = ref([]); // 使用ref定义一个响应式变量
+    const newPost = reactive({ title: '' }); // 使用reactive定义一个响应式对象
+ 
+    const fetchPosts = async () => {
+      try {
+        const data = await api.getPosts(); // 调用封装的接口函数
+        user.value = data;
+      } catch (error) {
+        // 处理错误
+      }
+  } 
   }
+}
 }
 </script>
 

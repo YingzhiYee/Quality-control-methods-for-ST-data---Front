@@ -120,6 +120,17 @@ export default {
     }
   },
   methods: {
+    setup() {
+    const fetchPosts = async () => {
+      try {
+        const data = await api.getTable(); // 调用封装的接口函数
+        tableData.value = data;
+      } catch (error) {
+        // 处理错误
+      }
+  } 
+  },
+
 
     handleChange(val) {
       console.log(val)

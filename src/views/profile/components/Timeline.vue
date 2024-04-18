@@ -38,6 +38,18 @@ export default {
         }
       ]
     }
+  },
+  methods:{
+    setup() {
+    const fetchPosts = async () => {
+      try {
+        const data = await api.getTime(); // 调用封装的接口函数
+        timeline.value = data;
+      } catch (error) {
+        // 处理错误
+      }
+  } 
   }
+}
 }
 </script>
